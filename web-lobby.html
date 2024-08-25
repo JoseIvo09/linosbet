@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,8 @@
       color: #fff;
     }
 
-    .editablePart, .menuInput {
+    .editablePart,
+    .menuInput {
       padding: 0;
       margin: 0;
       font-size: 20px;
@@ -26,7 +28,8 @@
       height: 25px;
     }
 
-    .editablePart:hover, .menuInput:hover {
+    .editablePart:hover,
+    .menuInput:hover {
       background-color: transparent;
     }
 
@@ -61,7 +64,7 @@
       position: absolute;
       width: 15%;
       right: 38px;
-      top: 75px;
+      top: 85px;
       -webkit-text-fill-color: white;
       -webkit-text-stroke: 0.6px black;
     }
@@ -80,7 +83,7 @@
       position: absolute;
       width: 30%;
       left: 10px;
-      top: 75px;
+      top: 85px;
       -webkit-text-fill-color: white;
       -webkit-text-stroke: 0.6px black;
     }
@@ -102,6 +105,7 @@
     }
   </style>
 </head>
+
 <body>
   <!-- Botão Home -->
   <button onclick="window.location.href='https://linosbet.vercel.app/inicio.html';" id="homeButton">Home</button>
@@ -121,14 +125,14 @@
     <option value="pt-Br">Pt-BR</option>
     <option value="pt-pt">Português</option>
     <option value="es">Espanhol</option>
-    <option value="en-us">Us</option>
-    <option value="id-ID">Idonesio</option>
-    <option value="fr-ca">Frances</option>
-    <option value="es-en">En</option>
+    <option value="en-us">US</option>
+    <option value="id-ID">Indonésio</option>
+    <option value="fr-ca">Francês</option>
+    <option value="es-en">EN</option>
     <option value="ru">Russo</option>
-    <option value="ar">Arabe</option>
-    <option value="zh-cn">Chinês Sim</option>
-    <option value="zh-tw">Chinês Trad</option>
+    <option value="ar">Árabe</option>
+    <option value="zh-cn">Chinês Simplificado</option>
+    <option value="zh-tw">Chinês Tradicional</option>
     <option value="de-ge">Alemão</option>
     <option value="it">Italiano</option>
     <option value="ja-jv">Japonês</option>
@@ -143,7 +147,7 @@
   <p id="editablePart3" class="editablePart" contenteditable="false"></p>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const loadButton = document.getElementById("loadButton");
       const myFrame = document.getElementById("myFrame");
       const menu = document.getElementById("menu");
@@ -151,7 +155,7 @@
 
       loadButton.addEventListener('click', loadUrl);
 
-      menu.addEventListener('change', function() {
+      menu.addEventListener('change', function () {
         editablePart3.innerText = menu.options[menu.selectedIndex].text;
       });
 
@@ -171,7 +175,14 @@
 
       function mostrarHorarioAtual() {
         var data = new Date();
-        var horarioAtual = data.toLocaleTimeString();
+        var options = {
+          timeZone: "America/Sao_Paulo",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+            fractionalSecondDigits: 3
+        };
+        var horarioAtual = new Intl.DateTimeFormat("pt-BR", options).format(data);
         document.getElementById("horario-atual").innerHTML = horarioAtual;
       }
 
@@ -182,4 +193,5 @@
 
   <iframe name="myFrame" id="myFrame" src="about:blank" allow="encrypted-media" width="100%" height="560" scrolling="no" frameborder="no" allowfullscreen="true"></iframe>
 </body>
+
 </html>
