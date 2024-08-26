@@ -65,10 +65,30 @@
       -webkit-text-fill-color: white;
       -webkit-text-stroke: 0.6px black;
     }
+
+    /* Estilo para o botão "Home" */
+    #homeButton {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+      font-size: 12px;
+      border-radius: 5px;
+    }
+
+    #homeButton:hover {
+      background-color: #555;
+    }
   </style>
 </head>
+
 <body>
-  <label for="editablePart">Escolha o idioma:</label>
+  <!-- Botão Home -->
+  <button onclick="window.location.href='https://linosbet.vercel.app/inicio.html';" id="homeButton">Home</button>
+
+  <label for="editablePart">Idioma:</label>
   <select id="editablePart" class="editablePart">
     <option value="pt-BR">Pt-BR</option>
     <option value="pt-PT">Português</option>
