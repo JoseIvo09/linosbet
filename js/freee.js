@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 return;
             }
 
-            var newUrl = "https://m.pgsoft-games.com/" + encodeURIComponent(part1) + "/index.html?bet_type=1&operator_token=ca7094186b309ee149c55c8822e7ecf2&&gs_session=05C7730B-2FC1-434E-B935-A635074732C3&btt=2&__refer=m.pg-redirect.net&or=static.pgsoft-games.com&btt=2&l=" + encodeURIComponent(part2) + "__refer=m.pg-redirect.net&or=static.pgsoft-games.com&__hv=1f8cc507&game=" + encodeURIComponent(part3);
+            var newUrl = "https://m.eajzzxhro.com/" + encodeURIComponent(part1) + "/index.html?ot=ca7094186b309ee149c55c8822e7ecf2&l=" + encodeURIComponent(part2) + "&btt=2&or=05xyfynh%3Djfoeecmwt%3Dhtr&__hv=2fMEYCIQDJIHTAKwAj0OUQalGno8FriL1SooqsW5Cnr5hQmVT3QwIhAMwb0uEs9aSyFVta7sR9a7vomvaL1JsOUpuniv%2FaHznv&__sv=010401YytG6oT6vOl81kKt_NDwR6QjynyruQC7y9kpWiV7QEg&game=" + encodeURIComponent(part3);
             myFrame.src = newUrl;
         }
     }
